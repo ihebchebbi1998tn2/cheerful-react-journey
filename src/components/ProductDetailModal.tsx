@@ -80,25 +80,25 @@ const ProductDetailModal = ({ isOpen, onClose, product }: ProductDetailModalProp
 
           <div className="w-full md:w-1/2 space-y-3 p-1 md:p-2">
             <div>
-              <h2 className="text-base md:text-xl font-bold text-gray-800">{product.name}</h2>
-              <p className="text-xs md:text-sm text-gray-500">REF: {product.id.toString().padStart(6, '0')}</p>
+              <h2 className="text-base md:text-xl font-bold text-black">{product.name}</h2>
+              <p className="text-xs md:text-sm text-black">REF: {product.id.toString().padStart(6, '0')}</p>
             </div>
 
             <div className="text-lg md:text-2xl font-bold text-[#471818]">{product.price} TND</div>
 
             <div className="space-y-2">
               <div>
-                <h3 className="text-xs md:text-sm font-medium text-gray-700">Description</h3>
-                <p className="text-xs md:text-sm text-gray-600">{product.description}</p>
+                <h3 className="text-xs md:text-sm font-medium text-black">Description</h3>
+                <p className="text-xs md:text-sm text-black">{product.description}</p>
               </div>
 
               <div>
-                <h3 className="text-xs md:text-sm font-medium text-gray-700">Matière</h3>
+                <h3 className="text-xs md:text-sm font-medium text-black">Matière</h3>
                 <p className="text-xs md:text-sm text-gray-600">{product.material}</p>
               </div>
 
               <div>
-                <h3 className="text-xs md:text-sm font-medium text-gray-700">Statut</h3>
+                <h3 className="text-xs md:text-sm font-medium text-black">Statut</h3>
                 <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
                   product.status === 'En stock' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                 }`}>
@@ -108,7 +108,7 @@ const ProductDetailModal = ({ isOpen, onClose, product }: ProductDetailModalProp
             </div>
 
             <div className="flex items-center space-x-2">
-              <span className="text-xs md:text-sm font-medium text-gray-700">Quantité</span>
+              <span className="text-xs md:text-sm font-medium text-black">Quantité</span>
               <div className="flex items-center space-x-2">
                 <Button 
                   variant="outline" 
@@ -140,19 +140,20 @@ const ProductDetailModal = ({ isOpen, onClose, product }: ProductDetailModalProp
             </Button>
 
             <div className="text-xs space-y-1 pt-2">
-              <p className="flex items-center gap-1">
-                <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                Livraison gratuite en Tunisie
-              </p>
-              <p className="flex items-center gap-1">
-                <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                Retours gratuits sous 14 jours
-              </p>
-              <p className="flex items-center gap-1">
-                <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                Service client disponible 24/7
-              </p>
-            </div>
+  <p className="flex items-center gap-1 text-black">
+    <span className="w-1 text-black h-1 rounded-full bg-gray-500"></span>
+    Livraison gratuite en Tunisie
+  </p>
+  <p className="flex items-center gap-1 text-black">
+    <span className="w-1 h-1 rounded-full bg-gray-500"></span>
+    Retours gratuits sous 14 jours
+  </p>
+  <p className="flex items-center gap-1 text-black">
+    <span className="w-1 h-1 rounded-full bg-gray-500"></span>
+    Service client disponible 24/7
+  </p>
+</div>
+
           </div>
         </div>
       </DialogContent>
